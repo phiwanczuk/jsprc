@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<h1>Witaj Swiecie!</h1>
+<script>
+    var obslugaKlikniecia = function(event){
+        console.log("klikniecie" + event.pageX + " " + event.pageY);
+    }
+
+    $("h1").click(obslugaKlikniecia);
+</script>
+</body>
+</html>
