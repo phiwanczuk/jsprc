@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>szubienica</title>
+</head>
+<body>
+<h1>Szubienica!</h1>
+<script>
+
+//
+//    // wybieranie losowo slowa
+//    var slowo = slowa[Math.floor(Math.random() * slowa.length)];
+//
+//    // konfigurowanie tablicy z odpowiedziami
+//    var odpowiedzi = [];
+//    for(var i = 0; i < slowo.length; i++){
+//        odpowiedzi[i] = "_";
+//    }
+//
+//    var pozostaleLitery = slowo.length;
+//    var strzaly = slowo.length;
+//    var trafione = false;
+//
+//    // glowna petla gry
+//
+//    //    var liczbaStrzalow = slowo.length + 10;
+//
+//    while (pozostaleLitery > 0 && strzaly > 0) {
+//        //pokaz graczowi biezacy wynik
+//        alert(odpowiedzi.join(" "));
+//
+//
+//
+//        //wczytaj strzal uzytkownika
+//        var strzal = prompt("Podaj litere lub kliknij Anuluj, aby zakonczyc gre.");
+//        if(strzal === null) {
+//            // wyjdz  z glownej petli gry
+//            break;
+//        } else if(strzal.length !== 1){
+//            alert("podaj tylko jedna litere");
+//        }else{
+//            trafione = false;
+//            for(var j = 0; j < slowo.length; j++){
+//                if(slowo[j] === strzal.toLowerCase()){
+//                    odpowiedzi[j] = strzal.toLowerCase();
+//                    trafione = true;
+//                    pozostaleLitery--;
+//                }
+//            }
+//
+//            if(!trafione){
+//                strzaly--;
+//            }
+//        }
+//
+//    }
+//    //koniec glownej petli gry
+//
+//    if(!trafione) {
+//        alert("przegryw!");
+//        alert("przejebane!");
+//    } else {
+//        alert(odpowiedzi.join(" "));
+//        alert("Zjebales! odpowiedz " + slowo);
+//    }
+
+    function wybierzSlowo() {
+        var slowa = [
+            "javascript",
+            "tomb raider",
+            "monter",
+            "wlosy",
+            "zakaz",
+            "niesamowity",
+            "lampart"
+        ];
+        return slowa[Math.floor(Math.random() * slowa.length)];
+    }
+
+    function zbudujTabliceZOdpowiedziami (slowo){
+        var odpowiedzi = [];
+        for(var i = 0; i < slowo.length; i++) {
+            odpowiedzi[i] = "_";
+        }
+        return odpowiedzi;
+    }
+
+        function pokazBiezacyWynik (odpowiedzi){
+            return alert(odpowiedzi.join(" "));
+        }
+
+    function wczytajStrzal () {
+        return prompt("Podaj litere lub kliknij Anuluj, aby zakonczyc gre");
+    }
+
+    function aktualizujStanGry (strzal,slowo,odpowiedzi){
+        var pozostaleLitery = 0;
+        for(var j = 0; j < slowo.length; j++){
+            if(slowo[j] === strzal){
+                odpowiedzi[j] = strzal;
+                pozostaleLitery++;
+            }
+        }
+            return pozostaleLitery;
+    }
+
+    function pokazOdpowiedzIPogratulujGraczowi (odpowiedzi){
+        pokazBiezacyWynik(odpowiedzi);
+        return alert("Dobra robota " + odpowiedzi.join(" "));
+    }
+
+
+
+var slowo = wybierzSlowo();
+    var odpowiedzi = zbudujTabliceZOdpowiedziami(slowo);
+    var pozostaleLitery = slowo.length;
+
+    while(pozostaleLitery > 0) {
+        pokazBiezacyWynik(odpowiedzi);
+        var strzal = wczytajStrzal();
+        if(strzal === null){
+            break;
+        }else if(strzal.length !==1){
+            alert("podaj tylko jedna litere");
+        }
+        else{
+            var prawidloweStrzaly = aktualizujStanGry(strzal,slowo,odpowiedzi);
+            pozostaleLitery -= prawidloweStrzaly;
+        }
+    }
+
+    pokazOdpowiedzIPogratulujGraczowi(odpowiedzi);
+
+
+</script>
+</body>
+</html>
