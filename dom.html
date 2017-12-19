@@ -4,30 +4,57 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
-</head>
-<style>
-    div{
-        width:100px;
-        height:100px;
-        color: #000;
-    }
-</style>
-<body>
-<h1 id="jqueryNaglowek">waesd</h1>
-<div>
 
-</div>
+
+    <style>
+        .div{
+            width:100px;
+            height:100px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+
+<body>
+<h1 id="jqueryNaglowek">Hello World!</h1>
+<div class="div"> </div>
 
 <script>
-//$("body").append("<p>to jest nowy akap</p>");
-//
-//
-//for(var i = 0; i<5; i++){
-//    var hobby = prompt("Podaj jedno ze swoich hobby");
-//    $("body").append("<p>" + hobby + "</p>");
-//}
+    //$("body").append("<p>to jest nowy akap</p>");
+    //
+    //
+    //for(var i = 0; i<5; i++){
+    //    var hobby = prompt("Podaj jedno ze swoich hobby");
+    //    $("body").append("<p>" + hobby + "</p>");
+    //}
 
 
+//    var znikanie = function() {
+//        for (var i = 0; i < 6; i++) {
+//            $('div').fadeOut(1000);
+//            $('div').fadeIn(2000);
+//        }
+//    }
+
+
+    for(var i=0; i < 1; i++){
+        $("div").hide(500).delay(100).show(500);
+        for(var j =0; j< 1; j++){
+            $("div").hide(100).show(100);
+        }
+
+
+    }
+
+
+    $("h1").fadeTo(12000, 0.1);
+
+    var friends = ["Zenek", "Gienia", "Renia"];
+    var friend = friends[Math.floor(Math.random () * friends.length)]
+        for (var i = 0; i < friends.length; i++) {
+            $("body").append("<p>" + friends[i] + "</p>");
+        }
 
 </script>
 
