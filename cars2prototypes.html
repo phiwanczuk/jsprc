@@ -30,6 +30,16 @@
 
     };
 
+    Auto.prototype.wPrawo = function () {
+        this.x +=5;
+
+        this.autoElement.css({
+            left: this.x,
+            top: this.y
+        });
+    };
+
+
     var tesla = new Auto (20,20);
     var nissan = new Auto (100, 200);
 
