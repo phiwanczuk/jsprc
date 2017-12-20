@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+
+
+<script>
+    var Auto = function(x,y) {
+        this.x = x;
+        this.y = y;
+    };
+
+
+    Auto.prototype.rysuj = function() {
+        var autoHtml = '<img src="images/car.png">';
+
+        this.autoElement = $(autoHtml);
+
+        this.autoElement.css({
+            position: "absolute",
+            left: this.x,
+            top: this.y
+        });
+
+        $("body").append(this.autoElement);
+
+    };
+
+    var tesla = new Auto (20,20);
+    var nissan = new Auto (100, 200);
+
+    tesla.rysuj();
+    nissan.rysuj();
+
+
+
+</script>
+</body>
+</html>
