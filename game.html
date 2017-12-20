@@ -17,6 +17,7 @@
 >
 
 <p id="odleglosc"></p>
+<p id="pozostale"></p>
 
 <script>
 
@@ -57,11 +58,45 @@
     var szerokosc = 400;
     var wysokosc = 400;
     var klikniecia = 0;
+    var pozostaleKlikniecia = 15;
 
 
     //Wylosuj miejsce ukrycia skarbu
-    var
+    var cel = {
+        x: uzyskajLosowaLiczbe(szerokosc),
+        y: uzyskajLosowaLiczbe(wysokosc)
+    };
 
+    //Skojarz funkcje obslugi klikniecia z elementem img
+    $("#mapa").click(function (event) {
+        klikniecia++;
+        pozostaleKlikniecia--;
+        if(pozostaleKlikniecia === 0){
+            alert("game over");
+
+        }
+
+    //Oblicz odleglosc miedzy kliknieciem (zdarzeniem)
+    var odleglosc = obliczOdleglosc(event,cel);
+
+    //Na podstawie odleglosci wybierz podpowiedz
+    var podpowiedz = skonstruujPodpowiedz(odleglosc);
+
+    //Zaktualizuj element #odleglosc nowym tekstem podpowiedzi
+    $("#odleglosc").text(podpowiedz);
+
+
+    //Pozostale klikniecia
+        $("#pozostale").text(pozostaleKlikniecia);
+
+
+    // /Jesli klikniecie bylo dostatecznie blisko, poinformuj o wygranej
+
+
+    if(odleglosc < 8) {
+        alert("skarb zostal znaleziony po " + klikniecia + " kliknieciach");
+    }
+    });
 
 
 
