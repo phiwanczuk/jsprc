@@ -3,13 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="http://code.jquery.com/jquery-3.2.1.min.js">
+
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+
 </head>
 <body>
+<h1 id="naglowek">Znajdz ukryty skarb!</h1>
+
+<img id="mapa"
+     width="400"
+     height="400"
+     src="images/treasuremap.png"
+>
+
+<p id="odleglosc"></p>
+
+<script>
+
+    //Wylosuj liczbe z przedzialu od 0 do wartosci zmiennej rozmiar minus 1
+
+    var uzyskajLosowaLiczbe = function (rozmiar) {
+        return Math.floor(Math.random() * rozmiar);
+    };
+
+    //Oblicz odleglosc miedzy kliknieciem a celem
+    var obliczOdleglosc = function (event, cel) {
+        var roznicaX = event.offsetX - cel.x;
+        var roznicaY = event.offsetY - cel.y;
+        return Math.sqrt((roznicaX * roznicaX) + (roznicaY * roznicaY));
+    };
+
+    //Uzyskaj lancuch reprezentujacy odleglosc
+    var skonstruujPodpowiedz = function (odleglosc) {
+        if(odleglosc < 10) {
+            return "Parzy!";
+        }else if(odleglosc < 20){
+            return "Goraco";
+        }else if(odleglosc < 40){
+            return "Cieplo";
+        }else if(odleglosc < 80){
+            return "Letnio";
+        }else if(odleglosc < 160){
+            return "Zimno";
+        }else if(odleglosc < 320){
+            return "Mroz!";
+        }else{
+            return "Syberia";
+        }
+    };
+
+    //Ustawiamy nasze zmienne
+
+    var szerokosc = 400;
+    var wysokosc = 400;
+    var klikniecia = 0;
 
 
-    <script>
+    //Wylosuj miejsce ukrycia skarbu
+    var
 
-    </script>
+
+
+
+
+</script>
 </body>
 </html>
