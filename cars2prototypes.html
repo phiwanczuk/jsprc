@@ -39,12 +39,46 @@
         });
     };
 
+    Auto.prototype.wLewo = function() {
+        this.x -=5;
+
+        this.autoElement.css({
+            left: this.x,
+            top: this.y
+        });
+    };
+
+    Auto.prototype.wGore = function () {
+        this.y -=5;
+
+        this.autoElement.css({
+            left: this.x,
+            this: this.y
+        });
+    };
 
     var tesla = new Auto (20,20);
     var nissan = new Auto (100, 200);
 
     tesla.rysuj();
     nissan.rysuj();
+
+
+    var wePrawo = 0;
+
+    var przesuwajPrawo = function() {
+        $("img").offset({left: wePrawo});
+
+        wePrawo++;
+
+        if(wePrawo > 300){
+            wePrawo = 0;
+        }
+    }
+
+
+    setInterval(przesuwajPrawo, 30);
+
 
 
 
