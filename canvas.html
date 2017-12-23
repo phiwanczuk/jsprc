@@ -85,15 +85,60 @@
     var plotno = document.getElementById("plotno");
     var kontekst = plotno.getContext("2d");
 
-    kontekst.fillStyle = "skyblue";
-    kontekst.beginPath();
-    kontekst.moveTo(100,100);
-    kontekst.lineTo(100,60);
-    kontekst.lineTo(130,30);
-    kontekst.lineTo(160,60);
-    kontekst.lineTo(160,100);
-    kontekst.lineTo(100,100);
-    kontekst.fill();
+//    kontekst.fillStyle = "skyblue";
+//    kontekst.beginPath();
+//    kontekst.moveTo(100,100);
+//    kontekst.lineTo(100,60);
+//    kontekst.lineTo(130,30);
+//    kontekst.lineTo(160,60);
+//    kontekst.lineTo(160,100);
+//    kontekst.lineTo(100,100);
+//    kontekst.fill();
+
+//
+//    kontekst.lineWidth = 2;
+//    kontekst.strokeStyle = "Green";
+
+//    kontekst.beginPath();
+//    kontekst.arc(50,50, 20, 0, Math.PI / 2, false);
+//    kontekst.stroke();
+//
+//
+//    kontekst.beginPath();
+//    kontekst.arc(100,50,20,0, Math.PI, false);
+//    kontekst.stroke();
+//
+//    kontekst.beginPath();
+//    kontekst.arc(150,50,20,0, Math.PI * 2, false);
+//    kontekst.stroke();
+
+
+    var okrag = function(x,y,promien) {
+        kontekst.beginPath();
+        kontekst.arc(x,y,promien, 0, Math.PI * 2, false);
+        kontekst.stroke();
+    }
+
+    kontekst.lineWidth = 4;
+
+    kontekst.strokeStyle = "red";
+    okrag(100,100,10);
+
+    kontekst.strokeStyle = "orange";
+    okrag(100,100,20);
+
+    kontekst.strokeStyle = "Yellow";
+    okrag(100,100,30);
+
+    kontekst.strokeStyle = "Green";
+    okrag(100,100,40);
+
+    kontekst.strokeStyle = "Blue";
+    okrag(100,100,50);
+
+    kontekst.strokeStyle = "Purple";
+    okrag(100,100,60);
+
 </script>
 </body>
 </html>

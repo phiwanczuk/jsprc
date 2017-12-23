@@ -20,7 +20,7 @@
         <entry file="file://$PROJECT_DIR$/canvas.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="314">
-              <caret line="95" column="20" lean-forward="false" selection-start-line="95" selection-start-column="20" selection-end-line="95" selection-end-column="20" />
+              <caret line="139" column="22" lean-forward="false" selection-start-line="139" selection-start-column="22" selection-end-line="139" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -130,12 +130,12 @@
       <workItem from="1513777211922" duration="4749000" />
       <workItem from="1513784083618" duration="6680000" />
       <workItem from="1513847172358" duration="6907000" />
-      <workItem from="1514020847838" duration="6637000" />
+      <workItem from="1514020847838" duration="8118000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64687000" />
+    <option name="totallyTimeSpent" value="66168000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="764" y="33" width="597" height="699" extended-state="0" />
@@ -527,7 +527,7 @@
     <entry file="file://$PROJECT_DIR$/canvas.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="314">
-          <caret line="95" column="20" lean-forward="false" selection-start-line="95" selection-start-column="20" selection-end-line="95" selection-end-column="20" />
+          <caret line="139" column="22" lean-forward="false" selection-start-line="139" selection-start-column="22" selection-end-line="139" selection-end-column="22" />
           <folding />
         </state>
       </provider>
