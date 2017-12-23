@@ -3,8 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <title>Canvas</title>
+
+    <style>
+        canvas{
+          display: block;
+        }
+    </style>
 </head>
 <body>
+<canvas id="plotno" width="200" height="200"></canvas>
+<canvas id="plotno1" width="200" height="220"></canvas>
+<canvas id="plotno2" width="200" height="200"></canvas>
+<canvas id="plotno3" width="200" height="200"></canvas>
+<canvas id="plotno4" width="200" height="200"></canvas>
+<canvas id="plotno5" width="200" height="200"></canvas>
 
+
+
+
+
+<script>
+
+  var plotno = document.getElementById("plotno");
+
+  var kontekst = plotno.getContext("2d");
+
+      kontekst.fillRect(150,150,50,50);
+
+      kontekst.fillRect(100,100,10,10)
+
+//  var plotno1 = document.getElementById("plotno1");
+//
+//  var kontekst1 = plotno1.getContext("2d");
+//
+//      kontekst1.fillRect(170,0,10,20);
+//
+//  var plotno2 = document.getElementById("plotno2");
+//
+//  var kontekst2 = plotno1.getContext("2d");
+//
+//  kontekst1.fillRect(120,20,100,10);
+
+</script>
 </body>
 </html>
