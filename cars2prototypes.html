@@ -12,6 +12,7 @@
     var Auto = function(x,y) {
         this.x = x;
         this.y = y;
+        this.rysuj();
     };
 
 
@@ -30,8 +31,8 @@
 
     };
 
-    Auto.prototype.wPrawo = function () {
-        this.x +=5;
+    Auto.prototype.wPrawo = function (odleglosc) {
+        this.x += odleglosc;
 
         this.autoElement.css({
             left: this.x,
@@ -39,8 +40,8 @@
         });
     };
 
-    Auto.prototype.wLewo = function() {
-        this.x -=5;
+    Auto.prototype.wLewo = function(odleglosc) {
+        this.x -= odleglosc;
 
         this.autoElement.css({
             left: this.x,
@@ -48,38 +49,33 @@
         });
     };
 
-    Auto.prototype.wGore = function () {
-        this.y -=5;
+    Auto.prototype.wGore = function (odleglosc) {
+        this.y -= odleglosc;
 
         this.autoElement.css({
             left: this.x,
-            this: this.y
+            top: this.y
+        });
+    };
+
+    Auto.prototype.wDol = function(odleglosc) {
+        this.y += odleglosc;
+
+        this.autoElement.css({
+            left: this.x,
+            top: this.y
         });
     };
 
     var tesla = new Auto (20,20);
     var nissan = new Auto (100, 200);
 
-    tesla.rysuj();
-    nissan.rysuj();
 
 
-    var wePrawo = 0;
-
-    var przesuwajPrawo = function() {
-        $("img").offset({left: wePrawo});
-
-        wePrawo++;
-
-        if(wePrawo > 300){
-            wePrawo = 0;
-        }
-    }
-
-
-    setInterval(przesuwajPrawo, 30);
-
-
+    setInterval(function () {
+        tesla.wPrawo(Math.random() * 5);
+        nissan.wPrawo(Math.random() * 5);
+    }, 30)
 
 
 </script>
