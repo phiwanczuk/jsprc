@@ -12,7 +12,7 @@
 </head>
 <body>
 <canvas id="plotno" width="200" height="200"></canvas>
-<canvas id="plotno1" width="200" height="220"></canvas>
+<canvas id="plotno1" width="800" height="800"></canvas>
 <canvas id="plotno2" width="200" height="200"></canvas>
 <canvas id="plotno3" width="200" height="200"></canvas>
 <canvas id="plotno4" width="200" height="200"></canvas>
@@ -24,29 +24,62 @@
 
 <script>
 
-  var plotno = document.getElementById("plotno");
-
-  var kontekst = plotno.getContext("2d");
-
-      kontekst.fillRect(100,0,50,50);
-
-      kontekst.fillRect(120,50,10,20)
-      kontekst.fillRect(60,70,130,10)
-      kontekst.fillRect(90,80,70,70)
-      kontekst.fillRect(90,150,10,50)
-      kontekst.fillRect(150,150,10,50)
-
+//  var plotno = document.getElementById("plotno");
+//
+//  var kontekst = plotno.getContext("2d");
+//
+//
+//      kontekst.fillStyle = "red";
+//      kontekst.fillRect(100,0,50,50);
+//
+//      kontekst.fillRect(120,50,10,20)
+//      kontekst.fillStyle = "blue";
+//      kontekst.fillRect(60,70,130,10)
+//      kontekst.fillRect(90,80,70,70)
+//      kontekst.fillRect(90,150,10,50)
+//      kontekst.fillRect(150,150,10,50)
+//
 //  var plotno1 = document.getElementById("plotno1");
 //
 //  var kontekst1 = plotno1.getContext("2d");
 //
-//      kontekst1.fillRect(170,0,10,20);
-//
+//    kontekst1.strokeStyle = "crimson";
+//    kontekst1.lineWidth = 4;
+//    kontekst1.strokeRect(300,300,100, 20)
 //  var plotno2 = document.getElementById("plotno2");
 //
 //  var kontekst2 = plotno1.getContext("2d");
 //
-//  kontekst1.fillRect(120,20,100,10);
+//  kontekst2.strokeStyle = "Turquoise";
+//  kontekst2.lineWidth = 4;
+//  kontekst2.beginPath();
+//  kontekst2.moveTo(10,10);
+//  kontekst2.lineTo(60,60);
+//  kontekst2.moveTo(60,10);
+//  kontekst2.lineTo(10,60);
+//  kontekst2.stroke();
+
+    var plotno = document.getElementById("plotno");
+
+    var kontekst = plotno.getContext("2d");
+    kontekst.strokeStyle = "black";
+kontekst.lineWidth = 4;
+    kontekst.strokeRect(10,10,20,20);
+    ;
+
+    kontekst.beginPath();
+    kontekst.moveTo(20,30);
+    kontekst.lineTo(20,100);
+    kontekst.moveTo(20,50);
+    kontekst.lineTo(1,40);
+    kontekst.moveTo(20,50);
+    kontekst.lineTo(40,40);
+    kontekst.moveTo(20,100);
+    kontekst.lineTo(40,120);
+    kontekst.moveTo(20,100);
+    kontekst.lineTo(-430,1);
+    kontekst.stroke();
+
 
 </script>
 </body>
