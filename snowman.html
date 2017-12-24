@@ -11,38 +11,55 @@
 <script>
     var plotno = document.getElementById("plotno");
     var kontekst = plotno.getContext("2d");
+//
+//    var okrag = function(x,y,promien, wypelnijOkrag){
+//        kontekst.beginPath();
+//        kontekst.arc(x,y,promien, 0, Math.PI * 2, false);
+//        if(wypelnijOkrag){
+//            kontekst.fill();
+//        } else {
+//            kontekst.stroke();
+//        }
+//    };
+//
+//    var rysujBalwana = function(x,y){
+//        kontekst.fillStyle = "black";
+//        kontekst.lineWidth = 4;
+//
+//
+//        okrag(x+50, y+110, 40, false);
+//        okrag(x+50, y+40, 30, false);
+//        okrag(x+40, y+35, 5, true);
+//        okrag(x+60, y+35, 5, true);
+//
+//
+//        okrag(x+50, y+90, 5, true);
+//        okrag(x+50, y+110, 5, true);
+//        okrag(x+50, y+130, 5, true);
+//
+//        kontekst.fillStyle = "Orange";
+//        okrag(x + 50, y + 45, 5, true);
+//    };
+//
+//    rysujBalwana(0,0);
+//    rysujBalwana(100,20);
 
-    var okrag = function(x,y,promien, wypelnijOkrag){
-        kontekst.beginPath();
-        kontekst.arc(x,y,promien, 0, Math.PI * 2, false);
-        if(wypelnijOkrag){
-            kontekst.fill();
-        } else {
-            kontekst.stroke();
-        }
-    };
+//    var punkty = [[50,50], [50,100], [100,100], [100,50], [50,50]];
+//
+//    var punkt = function(punkty) {
+//        kontekst.beginPath();
+//        kontekst.moveTo(punkty[0][0], punkty[0][1]);
+//        for(var i = 1; i < punkty.length; i++){
+//            kontekst.lineTo(punkty[i][0],punkty[i][1]);
+//        }
+//        kontekst.stroke();
+//    };
+//
+//    punkt(punkty);
+//    var tajemniczePunkty = [[50,50], [50,100], [25,120], [100,50], [70,90], [100,90], [70,120]];
+//
+//    punkt(tajemniczePunkty);
 
-    var rysujBalwana = function(x,y){
-        kontekst.fillStyle = "black";
-        kontekst.lineWidth = 4;
-
-
-        okrag(x+50, y+110, 40, false);
-        okrag(x+50, y+40, 30, false);
-        okrag(x+40, y+35, 5, true);
-        okrag(x+60, y+35, 5, true);
-
-
-        okrag(x+50, y+90, 5, true);
-        okrag(x+50, y+110, 5, true);
-        okrag(x+50, y+130, 5, true);
-
-        kontekst.fillStyle = "Orange";
-        okrag(x + 50, y + 45, 5, true);
-    };
-
-    rysujBalwana(0,0);
-    rysujBalwana(100,20);
 
 </script>
 </body>
