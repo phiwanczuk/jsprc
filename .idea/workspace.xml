@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19f59380-ea44-45a7-abf4-70c082287f40" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ball.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ball.html" afterPath="$PROJECT_DIR$/ball.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,61 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="canvas.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/canvas.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1974">
-              <caret line="141" column="3" lean-forward="false" selection-start-line="141" selection-start-column="3" selection-end-line="147" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="snowman.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/snowman.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="882">
-              <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mousedrawing.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mousedrawing.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="27" column="6" lean-forward="false" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="animationcanvas.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/animationcanvas.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="84" column="7" lean-forward="false" selection-start-line="84" selection-start-column="7" selection-end-line="84" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ball.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ball.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-297">
-              <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dom.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dom.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
-              <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="70" />
+            <state relative-caret-position="238">
+              <caret line="38" column="31" lean-forward="false" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -122,9 +72,9 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="770" />
+    <option name="x" value="701" />
     <option name="y" value="46" />
-    <option name="width" value="586" />
+    <option name="width" value="655" />
     <option name="height" value="698" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -188,15 +138,16 @@
       <workItem from="1514020847838" duration="8764000" />
       <workItem from="1514110836947" duration="3149000" />
       <workItem from="1514536680666" duration="314000" />
-      <workItem from="1514539117156" duration="5039000" />
+      <workItem from="1514539117156" duration="5676000" />
+      <workItem from="1514551098193" duration="2874000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75316000" />
+    <option name="totallyTimeSpent" value="78827000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="770" y="46" width="586" height="698" extended-state="0" />
+    <frame x="701" y="46" width="655" height="698" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5607639" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -563,7 +514,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/animationcanvas.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
+        <state relative-caret-position="966">
           <caret line="84" column="7" lean-forward="false" selection-start-line="84" selection-start-column="7" selection-end-line="84" selection-end-column="7" />
           <folding />
         </state>
@@ -571,8 +522,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ball.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-297">
-          <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+        <state relative-caret-position="238">
+          <caret line="38" column="31" lean-forward="false" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
           <folding />
         </state>
       </provider>
