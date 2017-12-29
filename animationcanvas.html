@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>animated canvas</title>
+</head>
+<body>
+
+<canvas id="plotno" width="200" height="200"></canvas>
+
+<script>
+//    var plotno = document.getElementById("plotno");
+//    var kontekst = plotno.getContext("2d");
+
+//    var pozycja = 0;
+//    var rozmiar = 0;
+//
+//    setInterval(function() {
+//        kontekst.clearRect(0,0,200,200);
+//        kontekst.fillRect(0,0,rozmiar,rozmiar);
+//
+//        rozmiar++;
+//        pozycja++;
+//        if(rozmiar > 50) {
+//            rozmiar = 0;
+//        }
+//    },30);
+
+
+    var okrag = function (x,y,promien,wypelnijOkrag){
+        kontekst.beginPath();
+        kontekst.arc(x,y,promien, 0, Math.PI * 2, false);
+        if(wypelnijOkrag){
+            kontekst.fill();
+        }else {
+            kontekst.stroke();
+        }
+    };
+
+    var rysujPszczole = function(x,y) {
+        kontekst.lineWidth = 2;
+        kontekst.strokeStyle = "black";
+        kontekst.fillStyle = "gold";
+
+
+        okrag(x, y, 8, true);
+        okrag(x, y, 8, false);
+        okrag(x - 5, y - 11, 5, false);
+        okrag(x + 5, y - 11, 5, false);
+        okrag(x - 2, y - 1, 2, false);
+        okrag(x + 2, y - 1, 2, false);
+
+    };
+
+    var aktualizuj = function (wspolrzedna) {
+        var przesuniecie = Math.random() * 4 - 2;
+
+        wspolrzedna += przesuniecie;
+
+        if(wspolrzedna > 200) {
+            wspolrzedna = 200;
+        }
+        if(wspolrzedna < 0) {
+            wspolrzedna = 0;
+        }
+
+        return wspolrzedna;
+    };
+
+    var plotno = document.getElementById("plotno");
+    var kontekst = plotno.getContext("2d");
+
+    var x = 100;
+    var y = 100;
+
+    setInterval(function () {
+        kontekst.clearRect(0,0,200,200);
+
+        rysujPszczole(x,y);
+        x = aktualizuj(x);
+        y = aktualizuj(y);
+
+        kontekst.lineWidth = "5"
+        kontekst.strokeRect(0,0,200,200)
+    },1);
+</script>
+
+</body>
+</html>
