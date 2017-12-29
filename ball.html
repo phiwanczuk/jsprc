@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pilka</title>
+</head>
+<body>
+<canvas id="plotno" width="200" height="200"></canvas>
+
+<script>
+    var Pilka = function() {
+        this.x = 100;
+        this.y = 100;
+        this.xSzybkosc = -2;
+        this.ySzybkosc = 3;
+    };
+
+    var okrag = function (x,y,promien, wypelnijOkrag) {
+        kontekst.beginPath();
+        kontekst.arc(x,y,promien, 0, Math.PI * 2, false);
+        if(wypelnijOkrag){
+            kontekst.fill();
+        }else {
+            kontekst.stroke();
+        }
+    };
+
+    Pilka.prototype.rysuj = function () {
+        okrag(this.x, this.y, 3, true);
+    };
+
+    Pilka.prototype.przesuwaj = function() {
+        this.x += this.xSzybkosc;
+        this.y += this.ySzybkosc;
+    };
+
+    Pilka.prototype.sprawdzajKolizje = function() {
+        if(this.x < 0 || this.x > 200) {
+            this.xSzybkosc = -this.xSzybkosc;
+        }
+        if(this.y < 0 || this.y > 200) {
+            this.ySzybkosc = -this.ySzybkosc;
+        }
+    };
+
+    var plotno = document.getElementById("plotno");
+    var kontekst = plotno.getContext("2d");
+
+    var pilka = new Pilka();
+
+    setInterval(function() {
+        kontekst.clearRect(0,0,200,200);
+
+        pilka.rysuj();
+        pilka.przesuwaj();
+        pilka.sprawdzajKolizje();
+
+        kontekst.strokeRect(0,0,200,200)
+    }, 30);
+
+</script>
+</body>
+</html>
