@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+
+<canvas id="plotno"></canvas>
+
+
+<script>
+
+   var nazwaKlawiszy = {
+       32: "spacja",
+       37: "lewa",
+       38: "gora",
+       39: "prawa",
+       40: "dol"
+   };
+
+   $("body").keydown(function(event){
+       console.log(nazwaKlawiszy[event.keyCode]);
+   })
+</script>
+</body>
+</html>
